@@ -1,3 +1,4 @@
+
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
@@ -29,15 +30,15 @@ function generatePassword() {
   //var values = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghjiklmnopqrstuvwxyz1234567890!@#$%^&*()_+";
 
   var password = "";
- 
-  var lengthPrompt = parseInt(prompt("Hey input number, 8-128..."));
+  //parseInt will recognize imput number as number and not string
+  var lengthPrompt = parseInt(prompt("HEY YOU!!!! Choose the length of your password! Just pick a number between 8 and 128... GO!!!"));
 
   if(typeof lengthPrompt == 'number' && lengthPrompt >= 8 && lengthPrompt <= 128) {
 
-    var lowerCaseConfirm = confirm ("lower case?");
-    var upperCaseConfirm = confirm ("upper case?");
-    var numbersConfirm = confirm ("number?");
-    var specialCharactersConfirm = confirm ("characters?");
+    var lowerCaseConfirm = confirm ("Do you like lower case letters?");
+    var upperCaseConfirm = confirm ("Do you like upper case letters?");
+    var numbersConfirm = confirm ("What about numbers?");
+    var specialCharactersConfirm = confirm ("And characters? Do you like characters?");
   
     if(lowerCaseConfirm) stringToUse += lowerCase;
     if(upperCaseConfirm) stringToUse += upperCase;
@@ -45,8 +46,8 @@ function generatePassword() {
     if(specialCharactersConfirm) stringToUse += specialCharacters;
     if(stringToUse === "") {
 
-      alert("pick one type!");
-      return "try again";
+      alert("You have to pick at least one silly! :)");
+      return "Try me again";
     } // 4Loop
     for(var i = 0; i< lengthPrompt; i++) {
       var randomIndex = Math.floor(Math.random() * stringToUse.length);
@@ -55,8 +56,8 @@ function generatePassword() {
     return password;
   }
   else {
-    alert ("out or range/ not a number");
-    return "try again";
+    alert ("You kinda went out or range or you typed something other than a number. Stop being silly! >:|");
+    return "Try me again";
   }
   //4loop character choose
   //for(var i = 0; i<= generateBtn; i++){
