@@ -56,7 +56,7 @@ function generatePassword() {
     return password;
   }
   else {
-    alert ("You kinda went out or range or you typed something other than a number. Stop being silly! >:|");
+    alert ("You kinda went out of range or you typed something other than a number. Did you even type anything? Stop being silly! >:|");
     return "Try me again";
   }
   //4loop character choose
